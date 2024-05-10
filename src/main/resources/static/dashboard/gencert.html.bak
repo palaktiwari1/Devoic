@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Meta -->
+		<meta name="description" content="Admin Dashboard Templates">
+		<meta name="author" content="Bootstrap Gallery" />
+		<link rel="canonical" href="https://www.bootstrap.gallery/">
+		<meta property="og:url" content="https://www.bootstrap.gallery">
+		<meta property="og:title" content="Admin Templates - Dashboard Templates | Bootstrap Gallery">
+		<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
+		<meta property="og:type" content="Website">
+		<meta property="og:site_name" content="Bootstrap Gallery">
+		<link rel="shortcut icon" href="img/favicon.svg" />
+       <link rel="stylesheet" href="css/gencert.css">
+		<!-- Title -->
+		<title>Generate Certificate</title>
+
+
+		<!-- *************
+			************ Common Css Files *************
+		************ -->
+		<!-- Bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="fonts/style.css">
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/main.css">
+		<!-- Chat css -->
+		<link rel="stylesheet" href="css/chat.css">
+
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+	</head>
+
+	<body>
+	 
+		<a href="complete.html">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			Certificate Of Completion
+		</a>
+		<a href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			Certificate Of Appreciation
+		</a>
+	</body>
+
+</html>

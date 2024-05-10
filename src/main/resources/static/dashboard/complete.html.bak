@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experience Certificate Generator</title>
+  <style>
+  
+    .container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#certificateOutput {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Experience Certificate Generator</h1>
+    <form id="certificateForm">
+      <label for="employeeName">Employee Name:</label>
+      <input type="text" id="employeeName" required>
+      
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" required>
+      
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" required>
+      
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" required>
+      
+      <button type="submit">Generate Certificate</button>
+    </form>
+    
+    <div id="certificateOutput"></div>
+  </div>
+
+  <script>
+  
+    document.getElementById('certificateForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var employeeName = document.getElementById('employeeName').value;
+  var companyName = document.getElementById('companyName').value;
+  var duration = document.getElementById('duration').value;
+  var designation = document.getElementById('designation').value;
+  
+  var certificateContent = `
+    Experience Certificate
+
+    This is to certify that ${employeeName} has worked as a ${designation} at ${companyName} for a duration of ${duration}.
+
+    During their tenure, they have demonstrated excellent performance and contributed significantly to the success of our organization.
+
+    We wish them all the best in their future endeavors.
+
+    Created & Designed by Md Shamshir Asif
+  `;
+
+  var blob = new Blob([certificateContent], { type: 'text/plain' });
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  
+  link.href = url;
+  link.download = 'experience_certificate.txt';
+  link.click();
+  
+  document.getElementById('certificateOutput').innerHTML = certificateContent;
+});
+
+  </script>
+</body>
+</html>

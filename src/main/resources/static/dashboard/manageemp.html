@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manage Employees</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="/dashboard/css/bootstrap.min.css">
+	<!-- Icomoon Font Icons css -->
+	<link rel="stylesheet" href="/dashboard/fonts/style.css">
+	<!-- Main css -->
+	<link rel="stylesheet" href="/dashboard/css/main.css">
+	<!-- Chat css -->
+	<link rel="stylesheet" href="/dashboard/css/chat.css">
+
+<body>
+	<!-- Loading starts -->
+	<div id="loading-wrapper">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+	<!-- Loading ends -->
+
+	<!-- Page wrapper start -->
+	<div class="page-wrapper sidebar-mini">
+
+		<!-- Sidebar wrapper start -->
+		<nav id="sidebar" class="sidebar-wrapper" th:replace="~{HFS::side_bar}">
+
+
+
+		</nav>
+		<!-- Sidebar wrapper end -->
+
+		<!-- Page content start  -->
+		<div class="page-content">
+
+			<!-- Header start -->
+			<header class="header" th:replace="~{HFS::header_bar}">
+				<div class="toggle-btns">
+					<a id="toggle-sidebar" href="#">
+						<i class="icon-menu"></i>
+					</a>
+					<a id="pin-sidebar" href="#">
+						<i class="icon-menu"></i>
+					</a>
+				</div>
+				<div class="header-items">
+					<!-- Custom search start -->
+					<div class="custom-search">
+						<input type="text" class="search-query" placeholder="Search here ...">
+						<i class="icon-search1"></i>
+					</div>
+					<!-- Custom search end -->
+
+					<!-- Header actions start -->
+					<ul class="header-actions">
+						<li class="dropdown d-none d-sm-block">
+							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+								<i class="icon-calendar1"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
+								<div class="dropdown-menu-header">
+									Events (10)
+								</div>
+								<ul class="header-notifications">
+									<li>
+										<a href="#">
+											<div class="user-img away">
+												<img src="img/user6.png" alt="Admin Template">
+											</div>
+											<div class="details">
+												<div class="user-title">Abbott</div>
+												<div class="noti-details">Membership has been ended.</div>
+												<div class="noti-date">Today, 07:30 pm</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="user-img busy">
+												<img src="img/user13.png" alt="Premium Admin Dashboards">
+											</div>
+											<div class="details">
+												<div class="user-title">Braxten</div>
+												<div class="noti-details">Approved new design.</div>
+												<div class="noti-date">Today, 12:00 am</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="user-img online">
+												<img src="img/user19.png" alt="Premium Admin Dashboards">
+											</div>
+											<div class="details">
+												<div class="user-title">Larkyn</div>
+												<div class="noti-details">Check out every table in detail.</div>
+												<div class="noti-date">Today, 04:00 pm</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown d-none d-sm-block">
+							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+								<i class="icon-star2"></i>
+								<span class="count-label blue"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
+								<div class="dropdown-menu-header">
+									Bookmarks (21)
+								</div>
+								<div class="customScroll5">
+									<ul class="bookmarks p-3">
+										<li>
+											<a href="#">Bootstrap admin template</a>
+										</li>
+										<li>
+											<a href="#">Images resources</a>
+										</li>
+										<li>
+											<a href="#">Best admin templates 2023</a>
+										</li>
+										<li>
+											<a href="#">Javascript libraries</a>
+										</li>
+										<li>
+											<a href="#">Angular widgets</a>
+										</li>
+										<li>
+											<a href="#">UX library</a>
+										</li>
+										<li>
+											<a href="#">Bootstrap admin template</a>
+										</li>
+										<li>
+											<a href="#">Images resources</a>
+										</li>
+										<li>
+											<a href="#">Best admin templates 2023</a>
+										</li>
+										<li>
+											<a href="#">Javascript libraries</a>
+										</li>
+										<li>
+											<a href="#">Angular widgets</a>
+										</li>
+										<li>
+											<a href="#">UX library</a>
+										</li>
+										<li>
+											<a href="#">Bootstrap admin template</a>
+										</li>
+										<li>
+											<a href="#">Images resources</a>
+										</li>
+										<li>
+											<a href="#">Best admin templates 2023</a>
+										</li>
+										<li>
+											<a href="#">Javascript libraries</a>
+										</li>
+										<li>
+											<a href="#">Angular widgets</a>
+										</li>
+										<li>
+											<a href="#">UX library</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown d-none d-sm-block">
+							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+								<i class="icon-bell"></i>
+								<span class="count-label"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
+								<div class="dropdown-menu-header">
+									Notifications (40)
+								</div>
+								<ul class="header-notifications">
+									<li>
+										<a href="#">
+											<div class="user-img away">
+												<img src="img/user10.png" alt="Bootstrap Admin Panel">
+											</div>
+											<div class="details">
+												<div class="user-title">Abbott</div>
+												<div class="noti-details">Membership has been ended.</div>
+												<div class="noti-date">Today, 07:30 pm</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="user-img busy">
+												<img src="img/user10.png" alt="Admin Panel">
+											</div>
+											<div class="details">
+												<div class="user-title">Braxten</div>
+												<div class="noti-details">Approved new design.</div>
+												<div class="noti-date">Today, 12:00 am</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="user-img online">
+												<img src="img/user6.png" alt="Admin Template">
+											</div>
+											<div class="details">
+												<div class="user-title">Larkyn</div>
+												<div class="noti-details">Check out every table in detail.</div>
+												<div class="noti-date">Today, 04:00 pm</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown user-settings">
+							<a href="#" id="userSettings" data-toggle="dropdown" aria-haspopup="true">
+								<img src="img/user2.png" class="user-avatar" alt="Top Admin Dashboards">
+							</a>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+								<div class="header-profile-actions">
+									<div class="header-user-profile">
+										<div class="header-user">
+											<img src="img/user2.png" alt="Admin Template">
+										</div>
+										<h5>Palak Tiwari</h5>
+										<p>Admin</p>
+									</div>
+									<a href="user-profile.html"><i class="icon-user1"></i> My Profile</a>
+									<a href="account-settings.html"><i class="icon-settings1"></i> Account Settings</a>
+									<a href="login.html"><i class="icon-log-out1"></i> Sign Out</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- Header actions end -->
+				</div>
+			</header>
+			<!-- Header end -->
+
+			<!-- Main container start -->
+			<div class="main-container">
+
+				<!-- Page header start -->
+				<div class="page-header">
+
+					<!-- Breadcrumb start -->
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">Welcome, Palak</li>
+					</ol>
+					<!-- Breadcrumb end -->
+
+					<!-- App actions start -->
+					<div class="app-actions">
+						<button type="button" class="btn">Today</button>
+						<button type="button" class="btn">Yesterday</button>
+						<button type="button" class="btn">7 days</button>
+						<button type="button" class="btn">15 days</button>
+						<button type="button" class="btn active">30 days</button>
+					</div>
+					<!-- App actions end -->
+
+				</div>
+				<!-- Page header end -->
+
+
+				<div class="container">
+					<div class="table-wrapper">
+						<div class="table-title">
+							<div class="row">
+								<div class="col-sm-6">
+									<h2>Manage <b>Employees</b></h2>
+								</div>
+								<div class="col-sm-6">
+									<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
+											class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+									<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
+											class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+								</div>
+							</div>
+						</div>
+
+
+
+						<table class="table table" id="myTable">
+							<thead>
+								<tr>
+									<th>
+										<span class="custom-checkbox">
+											<input type="checkbox" id="selectAll">
+											<label for="selectAll"></label>
+										</span>
+									</th>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Address</th>
+									<th>Phone</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr data-th-each="empListdata : ${empList}">
+									<td>
+										<span class="custom-checkbox">
+											<input type="checkbox" id="checkbox2" name="options[]" value="1">
+											<label for="checkbox2"></label>
+										</span>
+									</td>
+									<td data-th-text="${empListdata.empId}"></td>
+									<td data-th-text="${empListdata.name}"></td>
+									<td data-th-text="${empListdata.email}"></td>
+									<td data-th-text="${empListdata.address}"></td>
+									<td data-th-text="${empListdata.phno}"></td>
+
+									<td>
+										<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
+												class="material-icons" data-toggle="tooltip"
+												title="Edit">&#xE254;</i></a>
+										<!-- <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+												class="material-icons" data-toggle="tooltip"
+												title="Delete">&#xE872;</i></a> -->
+												
+												<a href="/delete_emp"  th:href="@{'/delete_emp/'+${empListdata.empId}}" class="delete" >
+												<i class="material-icons" 	title="Delete">&#xE872;
+												
+												</i>
+												
+												</a>
+									</td>
+
+
+
+								</tr>
+								
+							</tbody>
+						</table>
+						<div class="clearfix">
+							<div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+							<ul class="pagination">
+								<li class="page-item disabled"><a href="#">Previous</a></li>
+								<li class="page-item"><a href="#" class="page-link">1</a></li>
+								<li class="page-item"><a href="#" class="page-link">2</a></li>
+								<li class="page-item active"><a href="#" class="page-link">3</a></li>
+								<li class="page-item"><a href="#" class="page-link">4</a></li>
+								<li class="page-item"><a href="#" class="page-link">5</a></li>
+								<li class="page-item"><a href="#" class="page-link">Next</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Edit Modal HTML -->
+				<div id="addEmployeeModal" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form action="/save_emps" method="post">
+								<div class="modal-header">
+									<h4 class="modal-title">Add Employee</h4>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">&times;</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label>Name</label>
+										<input type="text" name="name_add" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="email" name="email_add" class="form-control" required>
+									</div>
+
+									<div class="form-group">
+										<label>Phone</label>
+										<input type="text" name="phone_add" class="form-control" required>
+									</div>
+
+									<div class="form-group">
+										<label>Roles</label>
+
+										<select class="form-control custom-select browser-default" name="roles"
+											id="roles" required>
+											<option th:each="rolesdata : ${Roles}" th:value="${rolesdata.id}"
+												th:text="${rolesdata.roleName}"></option>
+
+										</select>
+
+
+									</div>
+
+									<div class="form-group">
+										<label>Address</label>
+										<textarea class="form-control" name="address_add" required></textarea>
+									</div>
+
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" name="password" class="form-control" required>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+									<input type="submit" class="btn btn-success" value="Add">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Edit Modal HTML -->
+				<div id="editEmployeeModal" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form action="/save_emp" method="post">
+									
+								<input type="hidden" name="edit_id" id="edit_id" class="form-control" >
+									
+								<div class="modal-header">
+									<h4 class="modal-title">Edit Employee</h4>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">&times;</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label>Name</label>
+										<input type="text" name="edit_name" id="edit_name" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="email" name="edit_email" id="edit_email" class="form-control" required>
+									</div>
+
+
+									<div class="form-group">
+										<label>Phone</label>
+										<input type="number" name="edit_phno" id="edit_phno" class="form-control" required>
+									</div>
+
+									<div class="form-group">
+										<label>Roles</label>
+
+										<select class="form-control custom-select browser-default" name="State"
+											id="State" required>
+											<option th:each="rolesdata : ${Roles}" th:value="${rolesdata.id}"
+												th:text="${rolesdata.roleName}"></option>
+
+										</select>
+
+
+									</div>
+
+
+									<div class="form-group">
+										<label>Address</label>
+										<textarea class="form-control" name="edit_address" id="edit_address" required></textarea>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+									<input type="submit" class="btn btn-info" value="Save">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Delete Modal HTML -->
+				<div id="deleteEmployeeModal" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form>
+								<div class="modal-header">
+									<h4 class="modal-title">Delete Employee</h4>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">&times;</button>
+								</div>
+								<div class="modal-body">
+									<p>Are you sure you want to delete these Records?</p>
+									<p class="text-warning"><small>This action cannot be undone.</small></p>
+								</div>
+								<div class="modal-footer">
+									<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+									<input type="submit" class="btn btn-danger" value="Delete">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+         </div>
+         
+         </div>
+         
+    <script>
+// Get reference to the table
+var table = document.getElementById("myTable");
+
+// Attach event listener to the table rows
+var rows = table.getElementsByTagName("tr");
+for (var i = 0; i < rows.length; i++) {
+  rows[i].addEventListener("click", function() {
+    // Access the row's content or specific cell values
+    var cells = this.getElementsByTagName("td");
+    var rowData = [];
+    for (var j = 0; j < cells.length; j++) {
+      rowData.push(cells[j].innerText);
+    }
+    console.log("Row data:", rowData);
+    console.log("Row data:", rowData[1]);
+  //edit_name,edit_email,edit_address,edit_phno
+  $('#edit_name').val(rowData[2]);
+  $('#edit_email').val(rowData[3]);
+  $('#edit_address').val(rowData[4]);
+  $('#edit_phno').val(rowData[5]);
+  $('#edit_id').val(rowData[1]);
+  
+  });
+}
+</script>
+
+				<!--**************************
+			**************************
+				**************************
+							Required JavaScript Files
+				**************************
+			**************************
+		**************************-->
+				<!-- Required jQuery first, then Bootstrap Bundle JS -->
+				<script src="/dashboard/js/jquery.min.js"></script>
+				<script src="/dashboard/js/bootstrap.bundle.min.js"></script>
+				<script src="/dashboard/js/moment.js"></script>
+
+
+				<!-- *************
+			************ Vendor Js Files *************
+		************* -->
+				<!-- Slimscroll JS -->
+				<script src="/dashboard/vendor/slimscroll/slimscroll.min.js"></script>
+				<script src="/dashboard/vendor/slimscroll/custom-scrollbar.js"></script>
+
+				<!-- Polyfill JS -->
+				<script src="/dashboard/vendor/polyfill/polyfill.min.js"></script>
+				<script src="/dashboard/vendor/polyfill/class-list.min.js"></script>
+
+				<!-- Apex Charts -->
+				<script src="/dashboard/vendor/apex/apexcharts.min.js"></script>
+				<script src="/dashboard/vendor/apex/custom/home/lineRevenueGradientGraph.js"></script>
+				<script src="/dashboard/vendor/apex/custom/home/radialTasks.js"></script>
+				<script src="/dashboard/vendor/apex/custom/home/lineNewCustomersGradientGraph.js"></script>
+
+				<!-- Peity Charts -->
+				<script src="/dashboard/vendor/peity/peity.min.js"></script>
+				<script src="/dashboard/vendor/peity/custom-peity.js"></script>
+
+				<!-- Circleful Charts -->
+				<script src="/dashboard/vendor/circliful/circliful.min.js"></script>
+				<script src="/dashboard/vendor/circliful/circliful.custom.js"></script>
+
+				<!-- Main JS -->
+				<script src="/dashboard/js/main.js"></script>
+</body>
+
+</html>

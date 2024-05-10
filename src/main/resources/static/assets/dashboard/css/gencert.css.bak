@@ -1,0 +1,95 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+$color-bg: #f3efe0;
+$color1: #1ad;
+$color2: #e76846;
+$color2: complement(tint($color1, 15%));
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+html {
+  min-height: 100%;
+}
+body {
+  background: $color-bg;
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+}
+.page-wrap {
+  margin: 0 auto;
+  padding: 3em;
+  text-align: center;
+}
+
+
+button {
+  display: block;
+  margin: 2em auto;
+  padding: 1em 4em;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  
+  &:active, &:focus {
+    outline: none;
+  }
+}
+button.blue {
+  background: $color1;
+  background: -webkit-linear-gradient(top, $color1 0%, darken($color1, 10%) 100%);
+  border-width: 1px;
+  border-style: solid;
+  border-color: darken($color1, 20%);
+  box-shadow:
+    0 5px 0 darken($color1, 20%),
+    inset 1px 1px rgba(white, 0.3),
+    inset -1px 0px rgba(white, 0.3);
+  text-shadow: 0 2px 0 shade($color1, 45%);
+  
+  &:hover,
+  &:focus {
+    background: darken($color1, 2.5%);
+    background: -webkit-linear-gradient(top, darken($color1, 2.5%) 0%, darken($color1, 5%) 100%);
+  }
+    
+  &:active {
+    box-shadow:
+      0 1px 0 darken($color1, 5%),
+      inset 1px 1px rgba(white, 0.3),
+      inset -1px 0px rgba(white, 0.3);
+    position: relative;
+    top: 4px;
+  }
+}
+button.orange {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent darken($color2, 10%) darken($color2, 20%);
+  box-shadow:
+    inset 1px 1px rgba(white,0.2),
+    inset -1px 0 rgba(white,0.2),
+    0 1px 3px rgba(50,54,61,0.15);
+  @include background-image(
+    linear-gradient(top, $color2, darken($color2, 5%))
+  );
+  text-shadow: 0 2px 0 shade($color2, 45%);
+  
+  &:hover,
+  &:focus {
+    background: lighten($color2, 1%);
+  }
+    
+  &:active {
+    position: relative;
+    top: 2px;
+    background: darken($color2, 3%);
+  }
+    
+}
